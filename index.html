@@ -1,34 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Ping coming soon page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <section class="main-container">
 
-  We are launching soon!
+    <div class="logo">
+      <img src="./images/logo.svg" alt="ping logo">
+    </div>
 
-  Subscribe and get notified
+    <div class="header">
+      <h1 class="title">We are launching <span>soon!</span></h1>
+      <p>Subscribe and get notified</p>
+    </div>
 
-  Notify Me
+    <div class="notify-form">
+      <form action="#" id="form">
+        <input type="email" placeholder="Your email address...">
+        <button class="subBtn">Notify Me</button>
+      </form>
+      <p class="error-msg">Please provide a valid email address</p>
+    </div>
 
-  &copy; Copyright Ping. All rights reserved.
+    <div class="img-container">
+      <img src="./images/illustration-dashboard.png" alt="illustration dashboard">
+    </div>
+
+    <div class="socials">
+      <div class="social-logos">
+        <ion-icon class="icons" name="logo-facebook"></ion-icon>
+        <ion-icon class="icons" name="logo-twitter"></ion-icon>
+        <ion-icon class="icons" name="logo-instagram"></ion-icon>
+      </div>
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+    </div>
+
+  </section>
 
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/TravisH-bot">Travis H</a>.
     </p>
   </footer>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="./index.js"></script>
 </body>
+
 </html>
