@@ -18,6 +18,7 @@
   /* Secondary */
   --pale-blue: hsl(223, 100%, 88%);
   --light-red: hsl(354, 100%, 66%);
+  --green: hsl(154, 59%, 51%);
 
   /* Neutral */
   --gray: hsl(0, 0%, 59%);
@@ -83,12 +84,12 @@ body {
   display: flex;
   min-height: 8rem;
   width: 45rem;
+
   flex-direction: column;
 }
 
 #form {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -101,6 +102,7 @@ input {
   padding-left: 2rem;
   color: var(--gray);
   font-size: 1rem;
+  outline: none;
 }
 
 .error-msg {
@@ -108,9 +110,17 @@ input {
   font-style: italic;
   color: var(--light-red);
   text-align: left;
-  margin: 0.5rem 0 0 5rem;
+  margin: 0.5rem 0 0 2rem;
   font-weight: 600;
   display: none;
+}
+
+.error {
+  border: 0.2rem solid var(--light-red);
+}
+
+.success {
+  border: 0.2rem solid var(--green);
 }
 
 .subBtn {
@@ -174,6 +184,7 @@ input {
 
 .img-container {
   display: flex;
+  margin-bottom: 1rem;
 }
 
 .img-container img {
@@ -222,13 +233,16 @@ input {
 /* =========================== Media Queries =========================== */
 
 @media screen and (max-width: 768px) {
+  .main-container {
+    width: 23.438rem;
+  }
   /* =========================== Header Info =========================== */
   .header h1 {
     font-size: 1.6rem;
   }
 
   .header p {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   /* =========================== Form =========================== */
@@ -237,14 +251,38 @@ input {
   }
 
   #form {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .input {
-    width: 20rem;
+  input {
+    width: 19rem;
+    height: 3rem;
+    margin: 0 0 1rem 0;
+  }
+
+  .error-msg {
+    text-align: center;
+    margin: -0.3rem 0 1rem 0;
   }
 
   .subBtn {
-    width: 18rem;
+    width: 19rem;
+    height: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  /* =========================== Image Container =========================== */
+  .img-container img {
+    height: 14rem;
+    width: 20rem;
+    margin-bottom: 4rem;
+  }
+
+  .attribution {
+    text-align: center;
+    margin: 3rem 0;
+    font-size: 0.8rem;
   }
 }
